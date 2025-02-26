@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommy Song</title>
+    <link rel="stylesheet" href="Website.css">
+</head>
+<body>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="home-content">
+        <div class="asl-name">
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-T.png" alt="T"><span>T</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-O.png" alt="O"><span>O</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-M.png" alt="M"><span>M</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-M.png" alt="M"><span>M</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-Y.png" alt="Y"><span>Y</span>
+          </div>
+        </div>
+
+        <div class="asl-name">
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-S.png" alt="S"><span>S</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-O.png" alt="O"><span>O</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-N.png" alt="N"><span>N</span>
+          </div>
+          <div class="letter">
+            <img src="ASL Letters/ASL-Alphabet-G.png" alt="G"><span>G</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#Works">Works</a>
+          <a href="#about">About Me</a>
+          <!-- <a href="#">CV</a> -->
+        </nav>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+    <div class="profile-circle">
+      <img src="Portrait/Sketch Portrait.png" alt="Portrait">
+    </div>
+
+    <div class="asl-container">
+      <img src="ASL Letters/ASL-Alphabet-A.png" alt="A">
+      <img src="ASL Letters/ASL-Alphabet-B.png" alt="B">
+      <img src="ASL Letters/ASL-Alphabet-O.png" alt="O">
+      <img src="ASL Letters/ASL-Alphabet-U.png" alt="U">
+      <img src="ASL Letters/ASL-Alphabet-T.png" alt="T">
+      <img src="ASL Letters/ASL-Alphabet-M.png" alt="M">
+      <img src="ASL Letters/ASL-Alphabet-E.png" alt="E">
+    </div>
+
+    <div class="asl-labels">
+      <span>A</span>
+      <span>B</span>
+      <span>O</span>
+      <span>U</span>
+      <span>T</span>
+      <span>M</span>
+      <span>E</span>
+    </div>
+
+    <p class="description">
+      Hi, I’m Tommy! I am a junior from Indiana University Bloomington who’s extremely excited about designing and
+      developing software applications, with a background in computer science and American Sign Language (ASL).
+    </p>
+
+    <div class="social-icons">
+      <a href="https://github.com/tsongyk" target="_blank">
+        <img src="Icons/Github Icon.png" alt="GitHub" />
+      </a>
+      <div class="divider"></div>
+      <a href="https://www.linkedin.com/in/tommy-song-0781bb247/" target="_blank">
+        <img src="Icons/Logos-Linkedin-icon.png" alt="LinkedIn" />
+      </a>
+    </div>
+
+    </section>
+
+    
+    <!-- Works Section -->
+    <section id="Works">
+      <div class="header-container">
+        <h1>Works</h1>
+        <img src="ASL Words/Work ASL2.png" alt="Illustration">
+      </div>
+      <div class="carousel-container">
+        <div class="projects-carousel" id="projectsCarousel">
+          <a class="project-card" href="https://github.com/gannont14/PointOfContactAPI" target="_blank">
+            <p class="project-title">Point of Contact</p>
+          </a>
+
+          <a class="project-card" href="https://github.com/tsongyk/ChessOpeningTrainer" target="_blank">
+            <p class="project-title">Chess Opening Trainer Tool - iOS</p>
+          </a>
+
+          <a class="project-card" href="https://github.com/tsongyk/TMI" target="_blank">
+            <p class="project-title">Too Much Info - iOS</p>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveCarousel(-1)">Previous</button>
+        <button class="carousel-button" onclick="moveCarousel(1)">Next</button>
+      </div> -->
+
+      <script>
+        let currentIndex = 0;
+        const carousel = document.getElementById('projectsCarousel');
+        const totalCards = carousel.children.length;
+
+        function moveCarousel(direction) {
+          const cardWidth = carousel.children[0].offsetWidth + 40; // Card width + margin
+          currentIndex += direction;
+
+          if (currentIndex < 0) {
+              currentIndex = totalCards - 1;
+          } else if (currentIndex >= totalCards) {
+              currentIndex = 0;
+          }
+
+          carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+      </script>
+    </section>
+  </body>
+</html>
