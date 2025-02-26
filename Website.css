@@ -249,3 +249,9 @@ nav a:hover {
     margin: 10px 0;
   }
 }
+
+@font-face {
+  font-family: 'Diary Of A Wimpy Kid Font';
+  src: url('../font/DiaryOfAWimpyKidFont-Regular.tff') format('truetype');
+  font-style: normal;
+}
