@@ -182,7 +182,8 @@ nav a:hover {
 .project-card {
   min-width: 350px;
   height: 400px;
-  background-color: #ddccf9;
+  border: 2px solid black;
+  background-color: transparent;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
