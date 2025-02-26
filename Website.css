@@ -252,6 +252,10 @@ nav a:hover {
 
 @font-face {
   font-family: 'Diary Of A Wimpy Kid Font';
-  src: url('../font/DiaryOfAWimpyKidFont-Regular.tff') format('truetype');
+  src: url('DiaryOfAWimpyKidFont-Rg.woff2') format('woff2'),
+      url('DiaryOfAWimpyKidFont-Rg.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
+
